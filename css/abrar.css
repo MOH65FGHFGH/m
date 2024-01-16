@@ -1,0 +1,194 @@
+/* :start variable */
+:root {
+    --main-color :white ;
+}
+/* end variabels */
+/* stat Global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    background: linear-gradient(45deg,  rgb(0, 255, 247) , rgb(24, 122, 219));
+}
+.parent{
+background-color: rgb(247, 247, 247);
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* small */
+@media(min-width:768px) {
+    .container{
+        width: 750px;
+    }
+    
+}
+/* medium */
+@media(min-width:992px) {
+    .container{
+        width: 970px;;
+    }
+    
+}
+/* large */
+@media(min-width:1200px) {
+    .container{
+        width:1170px;
+    }
+    
+}
+/* end global rules */
+/* Start Header */
+.header {
+    padding: 20px;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo{
+    width: 60px;
+}
+.header .links {
+    position: relative;
+}
+/* عشان الخط اللي في النص يكمل للاخر لما اروح عليه  */
+.header .links:hover .icon span:nth-child(2){
+    width: 100%;
+}
+.header .links .icon{
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    /* بتتحكم في شمال ويمين  */
+    justify-content: end;
+}
+.header  .links  .icon span{
+    background-color: white ;
+    margin-bottom: 5px;
+    height: 2px;
+    padding: 2px;
+}
+.header  .links  .icon span:first-child{
+    width: 100%;
+}
+.header  .links  .icon span:nth-child(2){
+    width: 50%;
+    transition: 0.3s;
+}
+.header  .links  .icon span:last-child{
+    width: 100%;
+}
+.header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color:white ;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+.header  .links ul::before{
+    content:"" ;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #59a5f5  transparent;
+    position: absolute;
+    right: 0px;
+    top: -20px;
+}
+.header  .links:hover ul{
+    display: block;
+}
+.header  .links  ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #034c96;
+    transition: 0.3s;
+}
+.header  .links  ul li a:hover{
+    padding-left: 25px;
+}
+.header  .links  ul li:not(:last-child){
+    border-bottom: 1px solid ;
+}
+/* end header */
+/* :startLANDING */
+.landing {
+    /* background-image: url(../image/undraw_medical_research_qg4d\ \(1\).png); */
+    background-size: cover;
+    position: relative;
+    height: calc(100vh - 64px);
+    margin: 0;
+}
+.landing .intro-text{
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+
+}
+
+.landing .intro-text p{
+    font-size: 20px;
+    line-height: 0.9;
+}
+/* :endlanding */
+/* start features */
+.features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: color white ;
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,  minmax(300px, 1fr));
+    gap: 20px;
+}
+.features .feat{
+    padding:20px ;
+    text-align: center;
+}
+.features .feat .i{
+    color: var(--main-color);
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.features .feat p{
+    line-height:0,9 ;
+    color: black;
+    font-size: 17px;
+}
+.koko img { 
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+/* end features */
